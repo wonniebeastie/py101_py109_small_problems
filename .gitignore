@@ -1,0 +1,7 @@
+variable_scope_chapter_exercises/
+
+.DS_Store
+
+# Ignore random file used for testing.
+test2.py
+test.py
