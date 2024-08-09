@@ -40,8 +40,7 @@ def utf16_value(string):
 		# print(total)
 	return total
 
-utf16_value('hello')
-
+print(utf16_value('hello')) # 532
 
 # These examples should all print True
 print(utf16_value('Four score') == 984)
@@ -55,3 +54,21 @@ print(utf16_value('') == 0)
 OMEGA = "\u03A9"              # UTF-16 character 'Ω' (omega)
 print(utf16_value(OMEGA) == 937)
 print(utf16_value(OMEGA + OMEGA + OMEGA) == 2811)
+
+
+# SOLUTION
+def utf16_value(string):
+    sum_ = 0
+    for char in string:
+        sum_ += ord(char)
+    return sum_
+
+# The variable was named with an underscore suffix - `sum_` - to avoid
+# shadowing Python's built-in `sum` function. 
+
+# The function iterates through each character in the given string 
+# using a `for` loop. 
+# For each character, we use the `ord` function to get its UTF-16 value
+# & add it to the sum.
+# Finally, after iterating through all the characters, the function 
+# returns the sum of all the character values.
